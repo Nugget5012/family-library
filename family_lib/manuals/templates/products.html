@@ -1,0 +1,26 @@
+{% extends "master.html" %}
+{% block content %}
+	<h3> PRODUCTS AVALIABLE </h3>
+	<h4> There is a total of {{products_count}} products currently avaliable</h4>
+	<table class="table table-bordered table table-striped table table-hover">
+		<thead>
+		  <tr>
+			<th>Name</th>
+			<th>Model</th>
+			<th>Description</th>
+			<th>Tag</th>
+		  </tr>
+		</thead>
+		<tbody>
+				{% for x in products %}
+				<tr>
+					<td><a href="{{ x.product_id }}">{{ x.product_name }}</a></td>
+					<td>{{ x.product_model }}</td>
+					<td>{{ x.product_description }}</td>
+					<td>{{ x.product_tag }}</td>
+				</tr>
+				{% endfor %}
+		
+		</tbody>
+	</table>
+{% endblock %}

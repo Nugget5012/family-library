@@ -1,0 +1,11 @@
+{% for field in form %}
+    {% if field.label == "Product Name" %}
+        <div class = "mb-3 mt-3">
+           {{ field.label_tag }} {{ field }} 
+        </div>
+    {% else %}
+        <div class = "mb-3">
+            {{ field.label_tag }} {{ field }}  
+        </div>
+    {% endif %}
+{% endfor %}

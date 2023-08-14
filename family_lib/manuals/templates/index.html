@@ -1,0 +1,23 @@
+{% extends "master.html" %}
+
+{% block title %}
+	Family Digital Library
+{% endblock %}
+
+
+
+{% block content %}
+
+	
+<div class="card" style="width:400px">
+  <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+  <div class="card-body">
+    <h4 class="card-title"><a href="manuals/" >Manuals</a></h4>
+    <p class="card-text">Manuals for Equipment and Furniture.</p>
+    <p>There are a total of {{num_products}} products.</p>
+    <p>There are a total of {{num_manuals}} manuals.</p>
+    
+  </div>
+</div>
+
+{% endblock %}

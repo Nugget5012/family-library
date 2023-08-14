@@ -1,0 +1,26 @@
+{% extends "master.html" %}
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+<h1> Product </h1>
+<p>Name: {{ myproduct.product_name}} </p>
+<p>Model: {{ myproduct.product_model}} </p>
+<p>Description: {{ myproduct.product_description}}</p>
+
+<h1> Manuals: </h1>
+<ul>
+{% for x in manuals %}
+<li>
+  
+<p>
+       <a href = "{{x.file_url}}">{{ x.title }}</a> 
+</p>
+<p>Description: {{ x.description }}</p>
+
+<p>Back to <a href="javascript:history.back()">Manuals</a></p>
+</li>
+{% endfor %}
+</ul>
+{% endblock %}
